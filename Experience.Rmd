@@ -1,0 +1,60 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Education Experience
+
+Master of Science in Biostatistics, Mailman School of Public Health, Columbia University,New York, NY (09/2022 - Present)
+
+Bachelor of Science in Chemistry, College of Chemistry, Nankai University, Tianjin, China (09/2017-06/2021)
+
+------------------------------------------------------------------------
+
+## Work Experience
+
+Quantitative Analyst Intern, Think Trader Fintech Co., Ltd, Shanghai, China (07/2020-09/2020)
+
+-   Learned using Python to load, process, clean, query data, and assisted the team in ensuring data quality.
+-   Participated in the development of a multi-factor stock-selection model. Used numpy, pandas and matplotlib to perform statistical analysis of the correlations between the Chinese Stock Index 300 (CSI 300) and technical indicators such as relative strength index (RSI).
+-   Assessed the proposed stock selection model by historical back-testing using Chinese stock market data of 50+ months using Python (talib and pandas).
+-   Examined machine learning algorithms including Random Forest and feedforward Neural Network for stock prediction using Python.
+
+------------------------------------------------------------------------
+
+## Research Experience
+
+Research Assistant, Institute of Polymer Chemistry, Nankai University, Tianjin, China (09/2020-04/2021)
+
+-   Successfully synthesized a type of copper sulfide nanoparticles for antibactria with various particle sizes.
+-   Characterized the chemical and physical properties of the nanoparticles. Conducted Antibacterial experiment to test their Minimum inhibitory concentration(MIC).
+-   Used Origin and MATLAB explored the correlation between different particle sizes and the antibacterial performance of the nanoparticles and make predictions. Finished a research paper.
+
+------------------------------------------------------------------------
+
+Research Assistant, State Key Laboratory of Elemento-Organic Chemistry (02/2019-01/2020)
+
+-   Developed a new synthetic strategy for a type of compound, participated in implementing experiments, data analysis and discussion and published a manuscript as a co-author.
+
+------------------------------------------------------------------------
+
+## Academic Project
+
+"Black Friday" Sales Data Analysis, User Portrait and Purchasing Power Forecast
+
+-   Cleaned, merged and analyzed 500,000+ data collected from Analytics Vidhya using Python.
+
+-   Applied Apriori algorithm to mine frequent item sets of goods and take effective bundling strategies and applied Random Forest Model to predict users' purchasing power.
+
+-   Applied decision tree, KNN, random forest and naive Bayes model to conduct user portrait. Trained and tested the data, compared the models and completed a research paper.
+
+---
+
+
+Prediction of Dow Jones Index based on Reddit's headlines
+
+-   Collected the top 25 headlines of Reddit's worldnews section in 2008-2016 from Kaggle, applied (Nature language toolkit) NLTK to clean the data.
+-   Designed research method, ran Naïve Bayes Model, Logistic Regression, feedforward Neural Network and LSTM model to predict the trend of the next day's DJI. Compared these models then proved the superiority of LSTM and FNN models and completed a research paper.
