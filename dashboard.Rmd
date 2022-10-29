@@ -1,0 +1,61 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(flexdashboard)
+library(plotly)
+library(ggplot2)
+```
+
+
+## Column {data-width="650"}
+
+### Find out which aisles was purchased more than 10000.
+
+```{r}
+data = p8105.datasets::instacart
+instacart_aisle = data %>%
+  count(aisle) %>%
+  filter(n>10000) %>%
+  mutate(aisle = fct_reorder(aisle, n)) %>%
+  plot_ly(
+    x = ~aisle, y = ~n, type = "bar", color = ~aisle) %>%
+    layout(title = "Aisles which was sold more than 10000")
+instacart_aisle
+```
+
+## Column {data-width="350"}
+
+### When do people buy things in dairy & eggs department? 
+
+```{r}
+Order_day_hour= data %>%
+   filter( department == "dairy eggs") %>%
+   ggplot(aes(x = order_hour_of_day, fill = aisle)) + geom_histogram() +
+   labs(x = "Hour of Day",
+        y =  "Number of Purchasing",
+        title = "Number of aisles in dairy eggs purchased by hour of day")
+ggplotly(Order_day_hour)
+   
+  
+```
+
+### Find out the relationship between products and their purchasing time
+
+```{r}
+Product_number =
+  drop_na(data) %>% 
+  filter(aisle == c("fresh vegetables","fresh fruits","packaged vegetables fruits", "fresh herbs","ice cream ice","instant foods"))
+
+Product_number %>% 
+plot_ly(color  = ~aisle, y = ~order_hour_of_day, type = "box", colors = "viridis") %>% 
+  layout( xaxis = list(title = "Aisles"),
+          yaxis = list(title = "Number of sales"))
+
+```
